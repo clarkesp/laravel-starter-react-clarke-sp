@@ -1,3 +1,4 @@
+import DevLoginAdmin from '@/components/dev-login-admin';
 import InputError from '@/components/input-error';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -5,15 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
-import { Form, Head, router } from '@inertiajs/react';
+import { Form, Head } from '@inertiajs/react';
 import { ShieldCheck } from 'lucide-react';
 
 interface AdminLoginProps {
     status?: string;
-    errors?: Record<string, string>;
 }
 
-export default function AdminLogin({ status, errors }: AdminLoginProps) {
+export default function AdminLogin({ status }: AdminLoginProps) {
     return (
         <AuthLayout
             title="Admin Panel Login"
@@ -33,7 +33,7 @@ export default function AdminLogin({ status, errors }: AdminLoginProps) {
                 resetOnSuccess={['password']}
                 className="flex flex-col gap-6"
             >
-                {({ processing }) => (
+                {({ processing, errors }) => (
                     <>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
@@ -95,6 +95,11 @@ export default function AdminLogin({ status, errors }: AdminLoginProps) {
                     {status}
                 </div>
             )}
+
+            {/* Admin Dev Quick Login - Only shows in development */}
+            <div className="mt-6">
+                <DevLoginAdmin />
+            </div>
         </AuthLayout>
     );
 }
