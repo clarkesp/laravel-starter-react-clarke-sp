@@ -3,7 +3,7 @@
         "laravel-boost": {
             "command": "/usr/local/Cellar/php/8.4.14/bin/php",
             "args": [
-                "/Users/clarkesp/WebStorm/laravel-starter-react-clarke-sp/artisan",
+                "/Users/clarkesp/WebStorm/laravel-starter-react-clarke-sp1/artisan",
                 "boost:mcp"
             ]
         }

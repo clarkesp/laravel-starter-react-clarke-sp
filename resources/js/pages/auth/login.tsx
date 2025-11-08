@@ -1,4 +1,3 @@
-import DevLogin from '@/components/dev-login';
 import InputError from '@/components/input-error';
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
@@ -116,11 +115,6 @@ export default function Login({
                     {status}
                 </div>
             )}
-
-            {/* Dev Quick Login - Only shows in development */}
-            <div className="mt-6">
-                <DevLogin />
-            </div>
         </AuthLayout>
     );
 }
