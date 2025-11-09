@@ -1,3 +1,4 @@
+import DevLoginTool from '@/components/dev-login-tool';
 import InputError from '@/components/input-error';
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
@@ -115,6 +116,8 @@ export default function Login({
                     {status}
                 </div>
             )}
+            
+            <DevLoginTool />
         </AuthLayout>
     );
 }

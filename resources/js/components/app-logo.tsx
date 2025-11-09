@@ -10,6 +10,9 @@ export default function AppLogo() {
                 <span className="mb-0.5 truncate leading-tight font-semibold">
                     Laravel Starter Kit
                 </span>
+                <span className="truncate text-xs text-green-600 dark:text-green-400">
+                    User
+                </span>
             </div>
         </>
     );
