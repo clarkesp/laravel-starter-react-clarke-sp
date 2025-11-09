@@ -1,17 +1,17 @@
 import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
-import { adminDashboard } from '@/routes';
+import { admin } from '@/routes';
 import { type BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Admin Dashboard',
-        href: adminDashboard().url,
+        href: admin.dashboard().url,
     },
 ];
 
-export default function AdminDashboard() {
+export default function AppAdminDashboard() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Admin Dashboard" />
